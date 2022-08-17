@@ -1,4 +1,4 @@
-  function ifHasTimeOut($ip) {
+  <?function ifHasTimeOut($ip) {
     $timeToBlock=5; //количество запросов до блокировки
     $liveTime = 5;  //через какое время будет обновляться счетчик обращений (в секундах)
     $memcache = new \Memcache; 
@@ -17,3 +17,4 @@
         $memcache->set($ip, 1, false, $liveTime);
     }
     }
+?>
