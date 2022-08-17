@@ -9,7 +9,7 @@
 ```php
     function ifHasTimeOut($ip) {
     $timeToBlock=5; //количество запросов до блокировки
-    $liveTime = 5;  //через какое время будет обновляться счетчик обращений
+    $liveTime = 5;  //через какое время будет обновляться счетчик обращений (в секундах)
     $memcache = new \Memcache; 
     $memcache->addServer('localhost', 11211);
     $count = $memcache->get($ip);
